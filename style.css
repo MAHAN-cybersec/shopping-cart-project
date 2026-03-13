@@ -1,31 +1,127 @@
+/* GENERAL STYLING */
+
 body{
-
-background:#f4f4f4;
-font-family:Arial;
-
+    background:#f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* NAVBAR */
+
+.navbar{
+    background:#343a40;
+}
+
+.navbar-brand{
+    color:white;
+    font-weight:bold;
+}
+
+.navbar a{
+    color:white;
+}
+
+/* CONTAINER */
 
 .container{
-
-max-width:500px;
-margin-top:50px;
-
+    margin-top:40px;
 }
+
+/* PRODUCT GRID */
 
 .product-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-
-gap:20px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
 }
 
+/* PRODUCT CARD */
+
 .product{
+    padding:20px;
+    border-radius:10px;
+    background:white;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+}
 
-padding:20px;
+/* HOVER EFFECT */
 
-text-align:center;
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* PRODUCT IMAGE */
+
+.product img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+/* PRODUCT PRICE */
+
+.product p{
+    font-weight:bold;
+    color:#28a745;
+}
+
+/* BUTTON */
+
+button{
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* CART LIST */
+
+.list-group-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* CART BUTTONS */
+
+.cart-btn{
+    margin-left:5px;
+}
+
+/* TOTAL PRICE */
+
+#total{
+    font-weight:bold;
+    color:#dc3545;
+}
+
+/* LOGIN & REGISTER BOX */
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:50px;
+    text-align:center;
+    color:#777;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
 
 }
